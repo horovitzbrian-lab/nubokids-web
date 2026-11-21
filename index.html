@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nubo Kids</title>
+<meta name="description" content="Nubo Kids hace juegos sencillos y seguros para niños de 4 a 6 años: sin anuncios, sin compras y sin recoger datos.">
+<link rel="icon" href="favicon.png">
+<style>
+/* Sin recursos de terceros: la fuente y las imágenes se sirven desde este mismo sitio. */
+@font-face { font-family: "Fredoka"; font-weight: 300 700; font-display: swap; src: url("fredoka-latin.woff2") format("woff2"); }
+:root {
+  --sky-top: #5cc2f2;
+  --sky-bottom: #c9efff;
+  --ink: #23406b;
+  --ink-soft: #4a6489;
+  --paper: #ffffff;
+  --pop: #ff5c8a;
+  --grass: #7cd36b;
+  --sun: #ffd23f;
+  --font: "Fredoka", "Arial Rounded MT Bold", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--sky-bottom);
+  line-height: 1.5;
+}
+.wrap { max-width: 880px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left)); padding-right: max(20px, env(safe-area-inset-right)); }
+header.hero {
+  background: linear-gradient(var(--sky-top), var(--sky-bottom));
+  padding-block: 56px 96px;
+  position: relative;
+  overflow: hidden;
+}
+header.hero::after {
+  content: ""; position: absolute; left: -10%; right: -10%; bottom: -60px; height: 120px;
+  background: var(--grass); border-radius: 50%;
+}
+.brand { display: flex; align-items: center; gap: 14px; }
+.cloud { width: 72px; height: 44px; flex: none; }
+.brand-name { font-size: 28px; font-weight: 700; letter-spacing: .01em; }
+h1 {
+  margin: 40px 0 12px;
+  font-size: clamp(36px, 7vw, 60px);
+  line-height: 1.05;
+  color: var(--paper);
+  text-shadow: 0 4px 0 var(--ink);
+  text-wrap: balance;
+  max-width: 14ch;
+}
+.lead { margin: 0; font-size: clamp(18px, 3.5vw, 22px); font-weight: 500; max-width: 34ch; }
+main { background: var(--paper); padding-block: 48px 56px; position: relative; z-index: 1; }
+h2 { font-size: 28px; margin: 0 0 20px; }
+.game {
+  display: grid; grid-template-columns: 128px 1fr; gap: 24px; align-items: center;
+  background: #eef7fd; border-radius: 28px; padding: 24px;
+}
+.game img { width: 128px; height: 128px; border-radius: 28px; display: block; }
+.game h3 { margin: 0 0 6px; font-size: 26px; }
+.game p { margin: 0; color: var(--ink-soft); font-size: 18px; }
+.tag { display: inline-block; margin-top: 12px; font-size: 15px; font-weight: 600; background: var(--sun); border-radius: 999px; padding: 4px 12px; color: var(--ink); }
+.promises { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; padding: 0; list-style: none; }
+.promises li { border: 3px solid #eef7fd; border-radius: 22px; padding: 18px; }
+.promises strong { display: block; font-size: 20px; }
+.promises span { color: var(--ink-soft); }
+footer { background: var(--ink); color: var(--paper); padding-block: 32px; }
+footer a { color: var(--sun); }
+.contact { font-size: 18px; margin: 0 0 8px; }
+.small { color: #c9d6e8; font-size: 14px; margin: 0; }
+@media (max-width: 600px) {
+  .game { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .promises { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <svg class="cloud" viewBox="0 0 72 44" aria-hidden="true"><g fill="#fff"><circle cx="20" cy="26" r="16"/><circle cx="38" cy="18" r="18"/><circle cx="54" cy="27" r="15"/><rect x="18" y="26" width="38" height="16" rx="8"/></g></svg>
+      <span class="brand-name">Nubo Kids</span>
+    </div>
+    <h1>Juegos sencillos para los más chicos</h1>
+    <p class="lead">Hacemos juegos para niños de 4 a 6 años, pensados para jugar sin leer y sin sorpresas para los padres.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h2>Nuestros juegos</h2>
+    <article class="game">
+      <img src="globos-felices.png" alt="Icono de Globos Felices: un globo rosa sonriente en el cielo" width="128" height="128">
+      <div>
+        <h3>Globos Felices</h3>
+        <p>Los globos de animalitos suben al cielo y el niño revienta los que pide cada nivel. Una voz le explica qué hacer y cada nivel ganado suma estrellas.</p>
+        <span class="tag">Muy pronto en Android y iPhone</span>
+      </div>
+    </article>
+
+    <ul class="promises">
+      <li><strong>Sin anuncios</strong><span>Nada que distraiga ni lleve a otras páginas.</span></li>
+      <li><strong>Sin compras</strong><span>Nada que se pueda pagar dentro del juego.</span></li>
+      <li><strong>Sin datos</strong><span>No recogemos información del niño ni del dispositivo.</span></li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="contact">Contacto: <a href="mailto:brian@nubokids.app">brian@nubokids.app</a></p>
+    <p class="small">© 2026 Nubo Kids</p>
+  </div>
+</footer>
+</body>
+</html>
